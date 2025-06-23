@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Album Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <!-- Album Cover and Title -->
+        <div class="album-section">
+            <img src="img/poster.png" alt="Album Cover" class="album-cover">
+            <h1>ZERO FOUR</h1>
+            <p>Kalam</p>
+        </div>
+
+        <!-- Streaming Links -->
+        <div class="links-section">
+            <div class="link">
+                <img src="img/spotify.png" alt="Spotify Logo">
+                <button>Play</button>
+            </div>
+            <div class="link">
+                <img src="img/applemusic.png" alt="Apple Music Logo">
+                <button>Play</button>
+            </div>
+            <div class="link">
+                <img src="img/youtubemusic.png" alt="YouTube Music Logo">
+                <button>Play</button>
+            </div>
+            <div class="link">
+                <img src="img/jiosaavn.png" alt="Jio Saavn">
+                <button>Watch</button>
+            </div>
+            <div class="link">
+                <img src="img/amazonmusic.png" alt="Amazon Music Logo">
+                <button>Play</button>
+            </div>
+            <div class="link">
+                <img src="img/gaana.png" alt="Gaana">
+                <button>Play</button>
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Powered by <strong>DireNote Media</strong></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    background: url('img/poster.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay on background */
+    backdrop-filter: blur(10px);
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.album-section img.album-cover {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.album-section h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.album-section p {
+    font-size: 18px;
+    color: #666;
+}
+
+.links-section {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.link img {
+    width: auto;
+    height: 30px;
+}
+
+.link button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.link button:hover {
+    background-color: #ddd;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer a {
+    color: #999;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    /* Hide background image and overlay on mobile */
+    body {
+        background: none;
+        margin-top: 50px;
+    }
+    .background-overlay {
+        display: none;
+    }
+    
+    /* Make the white box (container) cover the whole screen */
+    .container {
+        max-width: 100%;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        border-radius: 0; /* Remove border radius */
+        padding: 20px;
+    }
+}
+
+
+
+</style>
